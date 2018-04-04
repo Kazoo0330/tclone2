@@ -1,0 +1,131 @@
+li {
+	list-style:none;
+}
+
+ul {
+	padding: 0;
+}
+
+.header {
+	width: 100%;
+	background-color: #167be0;
+	color: white;
+	height: 54px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+header ul {
+	margin: 0 auto;
+	list-style: none;
+}
+
+header ul a {
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	color: white;
+}
+
+header li {
+	float: left;
+	width: auto;
+	// color: white;
+}
+
+header li a{
+	color: white;
+}
+
+header ul:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+footer {
+	width: 100%;
+	background-color: #167be0;
+	padding: 20px 0 10px 0;
+	color: white;
+	margin: auto;
+	padding-bottom: 10px;
+	font-size: 12px;
+	// position: absolute;
+	bottom: 0;
+}
+
+body {
+	text-align: center;
+}
+
+.menu {
+	backgroud-color: #012F4B;
+	color: #fff;
+}
+
+.menu li {
+	padding: 5% 10%;
+	text-align: center;
+}
+
+.contents li {
+	background-color: #F3A7AB;
+	color: #fff;
+	padding: 10% 10%;
+	box-sizing: border-box;
+	border: solid 1px #fff;
+}
+
+.topic li {
+	margin: 1%;
+	border-bottom: dotted 1px #333333;
+}
+
+.container {
+	margin: 0;
+	padding: 0;
+}
+
+.container-fluid {
+	background-color: #167be0;
+	color: white;
+}
+
+// a {
+// 	color: white;
+// }
+
+.navbar-default .navbar-brand{
+	color: white;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: white;
+}
+
+
+.container{
+	width: 100%;
+}
+
+textarea{
+	background-color: #d3edff;
+}
+
+actions input{
+	background-color: black;
+}
+
+.lists{
+	margin: auto;
+}
+
+.btn .btn-default{
+	color: black;
+}
+
+.translation_missing {
+	color: blue;
+}

@@ -1,0 +1,15 @@
+current directory: /Users/kazoo0330/workspace/diver/twiclone/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/kazoo0330/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20180316-47570-1lbrqu3.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kazoo0330/workspace/diver/twiclone/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/kazoo0330/workspace/diver/twiclone/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/kazoo0330/workspace/diver/twiclone/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20180316-47570-52u8mp

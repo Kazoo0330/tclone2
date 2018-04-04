@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>なかみ:</strong>
+  <%= @post.content %>
+</p>
+
+<%= link_to 'かきなおし', edit_post_path(@post) %> |
+<%= link_to 'もどる', posts_path %>

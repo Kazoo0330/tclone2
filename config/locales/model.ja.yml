@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    models:
+      blog: "ブログ"
+      user: "ユーザー"
+    attributes:
+      blog:
+        title: "なまえ"
+        content: "なかみ"
+      user:
+        title: "だいめい"
+        name: "なまえ"
+        email: "メアド"
+        current_password: "いまのPW"
+        password: "PW"
+        password_confirmation: "かくにんようPW"
+        remember_me: "ログインを記憶"
