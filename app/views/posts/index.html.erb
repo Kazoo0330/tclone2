@@ -37,7 +37,7 @@
   </div>
 <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
-
+<p class="attn">なんも いれないで 検索 したら 全部 でます</p>
 <% if @results.present? %>
   <%= render partial: "post", locals: { results: @results} %>
 <%# elsif params[:q].empty? %>
