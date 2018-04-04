@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 	@posts = Post.page(params[:page]).per(5)
 	# @posts = Post.paginate(page: params[:page])
 	@search = Post.ransack(params[:q])
-	@result = @search.result
+	@results = @search.result
   binding.pry
   end
 
