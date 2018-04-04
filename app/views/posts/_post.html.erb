@@ -8,7 +8,8 @@
 	</thread>
 
 	<tbody>
-		<% @results.each do |results| %>
+		<% results.each do |post| %>
+    <%# binding.pry %>
       <tr>
         <td><%= post.content %></td>
         <td><button type="button" class="btn btn-info"><%= link_to 'くわしく', post %></button></td>

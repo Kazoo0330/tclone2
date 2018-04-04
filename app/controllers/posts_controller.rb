@@ -3,12 +3,18 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-  @posts = Post.all.order(created_at: :desc)
-	@posts = Post.page(params[:page]).per(5)
-	# @posts = Post.paginate(page: params[:page])
-	@search = Post.ransack(params[:q])
-	@results = @search.result
-  binding.pry
+    # @posts = Post.all.order(created_at: :desc)
+	  @posts = Post.page(params[:page]).per(5)
+	  # @posts = Post.paginate(page: params[:page])
+   @search = Post.ransack(params[:q])
+
+   if params[:q].present?
+     @search = Post.ransack(params[:q])
+     @results = @search.result
+    end
+    # binding.pry
+  # elsif params[:q].nill?
+
   end
 
   # GET /posts/1

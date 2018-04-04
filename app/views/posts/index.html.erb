@@ -39,5 +39,10 @@
 <% end %>
 
 <% if @results.present? %>
-  <%= render @results %>
+  <%= render partial: "post", locals: { results: @results} %>
+<%# elsif params[:q].empty? %>
+  <!-- <p>けんさくけっか は ありません</p> -->
+<%# else %>
+  <!-- <p>けんさく できます</p> -->
+
 <% end %>
