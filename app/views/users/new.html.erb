@@ -1,0 +1,36 @@
+<h2>新規の人か？</h2>
+
+<h3>
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this @user from being saved:</h2>
+    <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+</h3>
+
+
+<%= form_with(model: @user, local: true) do |f| %>
+
+  <div class='label'><%= f.label :name %></div>
+  <%= f.text_field :name %>
+
+  <div class='label'><%= f.label :email %></div>
+  <%= f.email_field :email %>
+
+  <div class='label'><%= f.label :password %></div>
+  <%= f.password_field :password %>
+
+  <div class='label'><%= f.label :password_confirmation %></div>
+  <%= f.password_field :password_confirmation %>
+
+  <br />
+
+  <div class="space1">
+
+  <%= f.submit "つくる", class: 'btn btn-success' %>
+<% end %>

@@ -5,7 +5,7 @@ html{
 }
 
 body {
-  background-color: #fff;
+  background-color: #424242;
   color: #333;
   margin: 0;
   padding: 0;
@@ -59,9 +59,9 @@ div {
 }
 
 .field_with_errors {
-  padding: 2px;
+  // padding: 2px;
   // background-color: blue;
-  display: table;
+  // display: table;
 }
 
 #error_explanation {
@@ -80,20 +80,22 @@ div {
     font-weight: bold;
     padding: 5px 5px 5px 15px;
     font-size: 12px;
-    margin: -7px -7px 0;
+    margin: 0;
     // background-color: blue;
     // color: white;
+    font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
   }
 
   ul li {
     font-size: 12px;
-    list-style: square;
   }
 }
 
-label {
+.label {
   display: block;
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
   color: white;
+  padding: .0em .0em .0em .0em
 }
 
 @-webkit-keyframes blink{
@@ -111,4 +113,39 @@ label {
 
 .new_post{
 	color: blue;
+}
+
+input{
+  background-color: #424242;
+  color: white;
+  font-family: 'Snell Roundhand',sans-serif;
+}
+
+h1{
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+  color: white;
+}
+
+textarea{
+  // background-color: #424242;
+}
+
+
+.error_explanation{
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  // background-color: blue;
+  color: blue;
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+
+li {
+  color: white;
 }

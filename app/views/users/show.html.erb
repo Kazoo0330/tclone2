@@ -1,0 +1,5 @@
+<h1><%= @user.name %>のページ</h1>
+
+<P>メールアドレス：<%= @user.email %></P>
+
+<%=link_to '投稿する', new_post_path, class: 'btn btn-success' %>

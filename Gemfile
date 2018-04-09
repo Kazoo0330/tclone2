@@ -50,3 +50,4 @@ gem 'ransack'
 
 gem 'kaminari'
 
+gem 'bcrypt', '3.1.11'
