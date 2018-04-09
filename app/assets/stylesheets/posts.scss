@@ -93,9 +93,6 @@ body {
 	color: white;
 }
 
-// a {
-// 	color: white;
-// }
 
 .navbar-default .navbar-brand{
 	color: white;
@@ -134,4 +131,8 @@ actions input{
 	-webkit-animation:blink 0.8s ease-in-out infinite alternate;
 	-moz-animation:blink 0.8s ease-in-out infinite alternate;
 	animation:blink 0.8s ease-in-out infinite alternate;
+}
+
+a.test{
+	color: blue;
 }
