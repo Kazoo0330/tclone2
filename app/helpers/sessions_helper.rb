@@ -5,5 +5,6 @@ module SessionsHelper
 
   def logged_in?
     !current_user.nil?
+	  # redirect_to new_session_path, notice: "ログインしないでいけると思ってんの？"
   end
 end
