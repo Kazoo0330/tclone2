@@ -1,22 +1,21 @@
 <h1>探して みました</h1>
 
-<table class="lists">
-	<thread>
-		<tr>
-			<th colspan="3"></th>
-		</tr>
-	</thread>
+	<table class="lists">
+		<thread>
+			<tr>
+				<th colspan="3"></th>
+			</tr>
+		</thread>
 
-	<tbody>
-		<% results.each do |post| %>
-    <%# binding.pry %>
-      <tr>
-        <td><%= post.content %></td>
-        <td><button type="button" class="btn btn-info"><%= link_to 'くわしく', post %></button></td>
-        <td><button type="button" class="btn btn-warning"><%= link_to 'かきかえ', edit_post_path(post) %></button></td>
-        <td><button type="button" class="btn btn-danger"><%= link_to 'けす', post, method: :delete, data: { confirm: 'マジかよ...？' } %></button></td>
-      </tr>
-  <% end %>
-
-  </tbody>
-</table>
+		  <div class="row">
+				<% results.each do |post| %>
+					  <div class="col-md-6 col-xs-12">
+				      <table class="lists">
+				        	<td><%= post.content %></td>
+									<td><button type="button" class="btn btn-info"><%= link_to 'くわしく', post %></button></td>
+					        <td><button type="button" class="btn btn-warning"><%= link_to 'かきかえ', edit_post_path(post) %></button></td>
+					        <td><button type="button" class="btn btn-danger"><%= link_to 'けす', post, method: :delete, data: { confirm: 'マジかよ...？' } %></button></td>
+				      </table>
+						</div>
+	  		<% end %>
+			</div>

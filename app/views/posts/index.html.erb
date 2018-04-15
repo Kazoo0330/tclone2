@@ -1,28 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <h1>投稿っす</h1>
+<%= paginate @posts %>
 
-<table class="lists">
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <thead>
+        <tr>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.content %></td>
-        <td><button type="button" class="btn btn-info"><%= link_to 'くわしく', post %></button></td>
-        <td><button type="button" class="btn btn-warning"><%= link_to 'かきかえ', edit_post_path(post) %></button></td>
-        <td><button type="button" class="btn btn-danger"><%= link_to 'けす', post, method: :delete, data: { confirm: 'マジかよ...？' } %></button></td>
-      </tr>
-    <% end %>
-
-	<%= paginate @posts %>
-
-  </tbody>
-</table>
+      <div class="row">
+          <% @posts.each do |post| %>
+            <div class="col-md-6 col-xs-12">
+            <table class="lists">
+                <td><%= post.content %></td>
+                <td><button type="button" class="btn btn-info"><%= link_to 'くわしく', post %></button></td>
+                <td><button type="button" class="btn btn-warning"><%= link_to 'かきかえ', edit_post_path(post) %></button></td>
+                <td><button type="button" class="btn btn-danger"><%= link_to 'けす', post, method: :delete, data: { confirm: 'マジかよ...？' } %></button></td>
+            </table>
+          </div>
+          <% end %>
+      </div>
 
 <br>
 
