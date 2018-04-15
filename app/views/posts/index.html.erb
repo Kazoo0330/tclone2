@@ -13,7 +13,7 @@
           <% @posts.each do |post| %>
             <div class="col-md-6 col-xs-12">
             <table class="lists">
-                <td><%= post.content %></td>
+                <tr><%= post.content %></tr>
                 <td><button type="button" class="btn btn-info"><%= link_to 'くわしく', post %></button></td>
                 <td><button type="button" class="btn btn-warning"><%= link_to 'かきかえ', edit_post_path(post) %></button></td>
                 <td><button type="button" class="btn btn-danger"><%= link_to 'けす', post, method: :delete, data: { confirm: 'マジかよ...？' } %></button></td>
