@@ -5,5 +5,13 @@
   <%= @post.content %>
 </p>
 
+<% unless @post.user == current_user %> 
+  <% if @favorite.present? %>
+    <%= link_to '気に入らない', favorite_path(post_id: @post.id), method: :delete, class: 'btn btn-danger' %>
+  <% else %>
+    <%= link_to '気に入った', favorites_path(post_id: @post.id), method: :post, class: 'btn btn-primary' %>
+  <% end %>
+<% end  %>
+
 <%= link_to 'かきなおし', edit_post_path(@post), class: "test" %> |
 <%= link_to 'もどる', posts_path, class: "test" %>

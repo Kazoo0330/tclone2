@@ -18,6 +18,9 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find_by(id: params[:id])
+	@user = User.find_by(id: @post.user_id)
+	@favorite = current_user.favorites.find_by(blog_id: @blog.id)
   end
 
   def new
@@ -28,7 +31,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(
+	content: params[:content],
+	user_id: @current_user.id
+	)
 
     respond_to do |format|
       if @post.save
@@ -39,6 +45,7 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+	binding.pry
   end
 
   def update
@@ -61,13 +68,18 @@ class PostsController < ApplicationController
     end
   end
 
+  def ensure_current_user 
+    @post = Post.find_by(id:params[:id])
+	  if @post.user_id != @current_user.id 
+	    flash[:notice] = 'ちがうだろ？'
+		reidrect_to("/posts/index")
+	  end
+  end
+  # ↑違うuserはeditしないでindex飛べよ できねえから　
+
   private
     def set_post
       @post = Post.find(params[:id])
-    end
-
-    def post_params
-      params.require(:post).permit(:content)
     end
 
 	def must_login
