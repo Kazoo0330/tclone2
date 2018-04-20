@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   before_action :must_login, only: [:new, :edit, :show]
-  # ログインしてないのはみんなTOPに飛べ
   def index
     # @posts = Post.all.order(created_at: :desc)
 	  @posts = Post.page(params[:page]).per(5)
@@ -20,7 +19,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by(id: params[:id])
 	@user = User.find_by(id: @post.user_id)
-	@favorite = current_user.favorites.find_by(blog_id: @blog.id)
+	@favorite = current_user.favorites.find_by(post_id: @post.id)
   end
 
   def new
@@ -31,10 +30,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(
-	content: params[:content],
-	user_id: @current_user.id
-	)
+    @post = Post.new(post_params)
+	@post.user_id = current_user.id 
 
     respond_to do |format|
       if @post.save
@@ -75,9 +72,12 @@ class PostsController < ApplicationController
 		reidrect_to("/posts/index")
 	  end
   end
-  # ↑違うuserはeditしないでindex飛べよ できねえから　
 
   private
+    def post_params
+	  params.require(:post).permit(:content, :user_id, :blog_id)
+	end
+
     def set_post
       @post = Post.find(params[:id])
     end

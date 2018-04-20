@@ -39,7 +39,6 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-# こっから自分で追加してまった
 gem 'pry-rails'
 
 gem 'better_errors'
