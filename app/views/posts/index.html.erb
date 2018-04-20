@@ -33,14 +33,10 @@
     <%= f.label :content_cont, "Content" %>
     <%= f.text_field :content_cont, class: "form-control" %>
   </div>
-<div class="actions"><%= f.submit "Search" %></div>
+  <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
 <p class="attn">なんも いれないで 検索 したら 全部 でます</p>
+
 <% if @results.present? %>
   <%= render partial: "post", locals: { results: @results} %>
-<%# elsif params[:q].empty? %>
-  <!-- <p>けんさくけっか は ありません</p> -->
-<%# else %>
-  <!-- <p>けんさく できます</p> -->
-
 <% end %>

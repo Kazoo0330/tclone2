@@ -2,4 +2,14 @@
 
 <P>メールアドレス：<%= @user.email %></P>
 
+<h2><%= @user.name %>のお気に入りたち<h2>
+
+<% @favorite_posts.each do |favorite_posts| %>
+  <table>
+    <tr><p>投稿者:<%= favorite_posts.user.name %></p></tr>
+    <tr><p>ないよう:<%= favorite_posts.content %></p></tr>
+  </table>
+<% end %>
+
+
 <%=link_to '投稿する', new_post_path, class: 'btn btn-success' %>
