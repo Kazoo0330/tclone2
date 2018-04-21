@@ -13,9 +13,11 @@
 					  <div class="col-md-6 col-xs-12">
 				      <table class="lists">
 				        	<tr><%= post.content %></tr>
-									<td><button type="button" class="btn btn-info"><%= link_to 'くわしく', post %></button></td>
-					        <td><button type="button" class="btn btn-warning"><%= link_to 'かきかえ', edit_post_path(post) %></button></td>
-					        <td><button type="button" class="btn btn-danger"><%= link_to 'けす', post, method: :delete, data: { confirm: 'マジかよ...？' } %></button></td>
+							<td><button type="button" class="btn btn-info"><%= link_to 'くわしく', post %></button></td>
+					        <% if post.user_id == current_user.id %>
+							  <td><button type="button" class="btn btn-warning"><%= link_to 'かきかえ', edit_post_path(post) %></button></td>
+					          <td><button type="button" class="btn btn-danger"><%= link_to 'けす', post, method: :delete, data: { confirm: 'マジかよ...？' } %></button></td>
+							<% end %>
 				      </table>
 						</div>
 	  		<% end %>
